@@ -1,0 +1,110 @@
+
+# 🎨 Image Cartoonizer with FastAPI
+
+A web application that converts uploaded or camera-captured images into cartoonized versions using FastAPI and OpenCV.
+
+![Demo Screenshot](./assets/demo.gif) *(Replace with your own demo GIF/screenshot)*
+
+## ✨ Features
+
+- **Image Upload**: Drag-and-drop or select an image (JPG/PNG).
+- **Camera Capture**: Take photos directly from your device’s camera.
+- **Real-Time Cartoonization**: Transform images using edge detection and color quantization.
+- **Side-by-Side Preview**: Compare original and cartoonized versions.
+- **Download Cartoonized Image**: Save the processed image locally.
+
+## 🛠️ Tech Stack
+
+**Backend**:
+- Python & FastAPI
+- OpenCV (Image Processing)
+- Pillow (Image Handling)
+
+**Frontend**:
+- HTML/CSS/JavaScript
+- `getUserMedia` API (Camera Access)
+
+## 🚀 Installation
+
+### Prerequisites
+- Python 3.8+
+- pip
+
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Mwangiboyle/Cartoonize_images.git
+   cd cartoonize_images
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Create a `temp` directory for temporary files:
+   ```bash
+   mkdir -p cartoonize_images/temp
+   ```
+
+4. Start the FastAPI server:
+   ```bash
+   uvicorn backend.main:app --reload
+   ```
+
+5. Open `http://localhost:8000` in your browser.
+
+## 📸 Usage
+
+1. **Upload an Image**:
+   - Click "Choose File" or drag an image into the upload area.
+   - Supported formats: JPG, PNG (max 5MB).
+
+2. **Use Camera**:
+   - Click "Open Camera" and allow browser permissions.
+   - Capture a photo and click "Cartoonize".
+
+3. **Download**:
+   - After processing, click "Download" to save the cartoonized image.
+
+## 🐳 Deployment (Optional)
+
+Deploy using Docker:
+```bash
+docker build -t cartoonizer .
+docker run -p 8000:8000 cartoonizer
+```
+
+**Hosting Options**:
+- Heroku
+- AWS EC2
+- Render
+
+## 🧠 How It Works
+
+1. **Cartoonization Algorithm**:
+   - Convert image to grayscale.
+   - Apply median blur to reduce noise.
+   - Detect edges using adaptive thresholding.
+   - Combine with color quantization for a cartoon effect.
+
+2. **APIs**:
+   - `/upload`: Accepts `multipart/form-data` for image uploads.
+   - `/capture`: Processes base64-encoded camera images.
+
+## 🤝 Contributing
+
+1. Fork the repository.
+2. Create a branch: `git checkout -b feature/your-idea`.
+3. Commit changes: `git commit -m 'Add your feature'`.
+4. Push to the branch: `git push origin feature/your-idea`.
+5. Open a Pull Request.
+
+## 📄 License
+
+MIT License. See [LICENSE](./LICENSE).
+
+---
+
+**Inspired by**: [OpenCV Cartoonization Tutorial](https://learnopencv.com/cartoonize-an-image-using-opencv-in-python/)
+```
