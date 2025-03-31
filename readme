@@ -1,11 +1,11 @@
 
-# 🎨 Image Cartoonizer with FastAPI
+🎨 Image Cartoonizer with FastAPI
 
 A web application that converts uploaded or camera-captured images into cartoonized versions using FastAPI and OpenCV.
 
 ![Demo Screenshot](./assets/demo.gif) *(Replace with your own demo GIF/screenshot)*
 
-## ✨ Features
+ ✨ Features
 
 - **Image Upload**: Drag-and-drop or select an image (JPG/PNG).
 - **Camera Capture**: Take photos directly from your device’s camera.
@@ -13,24 +13,24 @@ A web application that converts uploaded or camera-captured images into cartooni
 - **Side-by-Side Preview**: Compare original and cartoonized versions.
 - **Download Cartoonized Image**: Save the processed image locally.
 
-## 🛠️ Tech Stack
+🛠️ Tech Stack
 
-**Backend**:
+Backend:
 - Python & FastAPI
 - OpenCV (Image Processing)
 - Pillow (Image Handling)
 
-**Frontend**:
+Frontend:
 - HTML/CSS/JavaScript
 - `getUserMedia` API (Camera Access)
 
-## 🚀 Installation
+ 🚀 Installation
 
-### Prerequisites
+Prerequisites
 - Python 3.8+
 - pip
 
-### Steps
+ Steps
 1. Clone the repository:
    ```bash
    git clone https://github.com/Mwangiboyle/Cartoonize_images.git
@@ -56,18 +56,18 @@ A web application that converts uploaded or camera-captured images into cartooni
 
 ## 📸 Usage
 
-1. **Upload an Image**:
+1. Upload an Image:
    - Click "Choose File" or drag an image into the upload area.
    - Supported formats: JPG, PNG (max 5MB).
 
-2. **Use Camera**:
+2. Use Camera:
    - Click "Open Camera" and allow browser permissions.
    - Capture a photo and click "Cartoonize".
 
-3. **Download**:
+3. Download:
    - After processing, click "Download" to save the cartoonized image.
 
-## 🐳 Deployment (Optional)
+ 🐳 Deployment (Optional)
 
 Deploy using Docker:
 ```bash
@@ -75,24 +75,24 @@ docker build -t cartoonizer .
 docker run -p 8000:8000 cartoonizer
 ```
 
-**Hosting Options**:
+Hosting Options:
 - Heroku
 - AWS EC2
 - Render
 
-## 🧠 How It Works
+ 🧠 How It Works
 
-1. **Cartoonization Algorithm**:
+1. Cartoonization Algorithm:
    - Convert image to grayscale.
    - Apply median blur to reduce noise.
    - Detect edges using adaptive thresholding.
    - Combine with color quantization for a cartoon effect.
 
-2. **APIs**:
+2. APIs:
    - `/upload`: Accepts `multipart/form-data` for image uploads.
    - `/capture`: Processes base64-encoded camera images.
 
-## 🤝 Contributing
+🤝 Contributing
 
 1. Fork the repository.
 2. Create a branch: `git checkout -b feature/your-idea`.
@@ -100,7 +100,7 @@ docker run -p 8000:8000 cartoonizer
 4. Push to the branch: `git push origin feature/your-idea`.
 5. Open a Pull Request.
 
-## 📄 License
+📄 License
 
 MIT License. See [LICENSE](./LICENSE).
 
