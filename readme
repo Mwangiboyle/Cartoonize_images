@@ -1,6 +1,6 @@
 🎨 Image Cartoonizer with FastAPI
 
-https://dezyre.gumlet.io/images/blog/computer-vision-projects/CartooniseImage.gif?w=720&dpr=1.3
+![image](https://dezyre.gumlet.io/images/blog/computer-vision-projects/CartooniseImage.gif?w=720&dpr=1.3)
 
 A web application that converts uploaded or camera-captured images into cartoonized versions using FastAPI and OpenCV.
 
